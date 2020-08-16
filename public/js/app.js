@@ -70043,7 +70043,7 @@ var NewProject = /*#__PURE__*/function (_Component) {
         name: this.state.name,
         description: this.state.description
       };
-      axios__WEBPACK_IMPORTED_MODULE_0___default.a.post('/api/projects/', project).then(function (res) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default.a.post('/api/projects', project).then(function (res) {
         history.push('/');
       })["catch"](function (error) {
         _this2.setState({
@@ -70306,7 +70306,7 @@ var SingleProject = /*#__PURE__*/function (_Component) {
         title: this.state.title,
         project_id: this.state.project.id
       };
-      axios__WEBPACK_IMPORTED_MODULE_0___default.a.post('/api/tasks/', task).then(function (res) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default.a.post('/api/tasks', task).then(function (res) {
         _this2.setState({
           title: ""
         });
@@ -70350,7 +70350,8 @@ var SingleProject = /*#__PURE__*/function (_Component) {
           tasks: res.data.tasks
         });
       });
-    }
+    } //ECHAzOZmepB-
+
   }, {
     key: "handleMarkProjectAsCompleted",
     value: function handleMarkProjectAsCompleted() {

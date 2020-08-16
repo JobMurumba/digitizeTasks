@@ -33,7 +33,7 @@ class SingleProject extends Component{
             project_id : this.state.project.id
         }
 
-        axios.post('/api/tasks/',task).then(res=>{
+        axios.post('/api/tasks',task).then(res=>{
             this.setState({
                 title:"",
 
@@ -79,7 +79,7 @@ class SingleProject extends Component{
                 })
             })
     }
-
+//ECHAzOZmepB-
     handleMarkProjectAsCompleted(){
         const {history} = this.props
 

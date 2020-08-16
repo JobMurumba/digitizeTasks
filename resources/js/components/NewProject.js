@@ -33,7 +33,7 @@ class NewProject extends Component{
             description:this.state.description
         }
 
-        axios.post('/api/projects/',project)
+        axios.post('/api/projects',project)
              .then(res=>{
                  history.push('/')
              })
