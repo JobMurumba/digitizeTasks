@@ -69916,12 +69916,12 @@ var App = /*#__PURE__*/function (_Component) {
         component: _ProjectList__WEBPACK_IMPORTED_MODULE_4__["default"]
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
         exact: true,
-        path: "/:id",
-        component: _SingleProject__WEBPACK_IMPORTED_MODULE_6__["default"]
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
-        exact: true,
         path: "/create",
         component: _NewProject__WEBPACK_IMPORTED_MODULE_5__["default"]
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
+        exact: true,
+        path: "/:id",
+        component: _SingleProject__WEBPACK_IMPORTED_MODULE_6__["default"]
       }))));
     }
   }]);
@@ -70343,7 +70343,6 @@ var SingleProject = /*#__PURE__*/function (_Component) {
     value: function componentDidMount() {
       var _this3 = this;
 
-      console.log("hey");
       var projectId = this.props.match.params.id;
       axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/projects/".concat(projectId)).then(function (res) {
         _this3.setState({
