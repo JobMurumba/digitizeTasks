@@ -5,6 +5,8 @@ import Header from './Header';
 import ProjectList from './ProjectList';
 import NewProject from './NewProject';
 import SingleProject from './SingleProject';
+import Register from './register';
+import Login from './Login';
 class App extends Component{
     render(){
         return(
@@ -14,7 +16,10 @@ class App extends Component{
                 <Switch>
                 <Route exact path='/' component={ProjectList}/>
                 <Route exact path='/create' component={NewProject}/>
+                <Route exact path='/register' component={Register}/>
+                <Route exact path="/login" component={Login}/>
                 <Route exact path="/:id" component={SingleProject}/>
+               
                 
                
                 </Switch>

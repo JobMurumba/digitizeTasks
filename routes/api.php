@@ -22,10 +22,12 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 
-Route::get('projects','ProjectController@index');
+Route::get('projects','ProjectController@index')->middleware('auth:api');
 Route::post('projects','ProjectController@store');
 Route::get('projects/{id}','ProjectController@show');
 Route::put('projects/{project}','ProjectController@markAsCompleted');
 Route::post('tasks','TaskController@store');
 Route::put('tasks/{task}','TaskController@markAsCompleted');
+Route::post('/register','AuthController@register');
+Route::post('/login','AuthController@login');
 
